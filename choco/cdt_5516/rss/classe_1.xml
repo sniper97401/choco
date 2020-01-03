@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><rss version="2.0" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<channel>
+<title>Cahier de textes - 3A - Travail</title>
+<link></link>
+<description>Site de test</description>
+<language>fr-fr</language>
+<lastBuildDate>Wed, 14 Nov 2018 08:08:29 GMT</lastBuildDate>
+<ttl>60</ttl>
+<image>
+	<title>Cahier de textes - 3A - Travail</title>
+	<url>http://pprefautycroire.free.fr/cdt/logo.png</url>
+	<link></link>
+</image>
+<item>
+	<title>Accueil - Classe entière        ( GAIN Mireille )</title>
+	<guid isPermaLink="false">cdt_1</guid>
+	<description><![CDATA[ Pour le 15-11-2018 : cvbcb	]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,40 @@
+version: '3.6'
+services:
+  web:
+    image: 'webdevops/php-nginx:7.3'
+    ports:
+      - 9001:80
+    volumes:
+      - './choco/:/app'
+    working_dir: /app
+    depends_on:
+      - database
+    env_file: .env
+    environment:
+      WEB_DOCUMENT_ROOT: /app
+      WEB_DOCUMENT_INDEX: index.php
+      PHP_DATE_TIMEZONE: "Europe/Paris"
+      PHP_DISPLAY_ERRORS: 1
+
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - database
+    ports:
+      - "8081:80"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: database
+
+  database:
+        image: 'mariadb:10.3'
+        ports:
+            - '3336:3306'
+        volumes:
+            - ./docker/database:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: mydatabase
+            MYSQL_USER: test
+            MYSQL_PASSWORD: test
